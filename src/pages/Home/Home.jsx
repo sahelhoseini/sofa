@@ -1,7 +1,10 @@
+import { Hero, Slider } from "../../components";
+
 const Home = () => {
   return (
     <>
-      <h1>Hello</h1>
+      <Hero />
+      <Slider />
     </>
   );
 };
