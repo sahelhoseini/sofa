@@ -5,48 +5,46 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* تنظیمات اولیه اسلایدر */
 .navigation-wrapper {
   position: relative;
-  width: 80%; /* عرض اسلایدر به صورت درصدی */
-  max-width: 100%; /* حداکثر عرض اسلایدر 1200px */
-  height: 500px; /* ارتفاع ثابت */
-  margin: 20px auto; /* مرکز کردن اسلایدر */
-  overflow: hidden; /* جلوگیری از نمایش محتوای اضافی */
-  border-radius: 15px; /* گوشه‌های گرد */
+  width: 80%;
+  max-width: 1440px;
+  height: 500px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .keen-slider {
-  width: 100%; /* عرض کامل اسلایدر */
-  height: 100%; /* ارتفاع کامل اسلایدر */
-  border-radius: 15px; /* گوشه‌های گرد اسلایدر */
+  width: 90%;
+  height: 100%;
+  border-radius: 15px;
 }
 
 .keen-slider__slide {
-  width: 100%; /* هر اسلاید عرض کامل اسلایدر را بگیرد */
-  height: 100%; /* ارتفاع کامل اسلاید */
-  border-radius: 15px; /* گوشه‌های گرد برای هر اسلاید */
+  width: 90%;
+  height: 100%;
+  border-radius: 15px;
 }
 
-/* تنظیمات ریسپانسیو */
 @media (max-width: 1024px) {
   .navigation-wrapper {
-    max-width: 90%; /* عرض اسلایدر 90% از عرض صفحه */
-    height: 400px; /* تغییر ارتفاع برای صفحات کوچکتر */
+    max-width: 90%;
+    height: 400px;
   }
 }
 
 @media (max-width: 768px) {
   .navigation-wrapper {
-    max-width: 90%; /* عرض کامل صفحه در اندازه‌های کوچک‌تر */
-    height: 300px; /* تغییر ارتفاع برای صفحات کوچکتر */
+    max-width: 90%;
+    height: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .navigation-wrapper {
-    max-width: 90%; /* عرض کامل صفحه در اندازه‌های خیلی کوچک */
-    height: 250px; /* تغییر ارتفاع برای صفحه‌های موبایل */
+    max-width: 90%;
+    height: 250px;
   }
 }
 
@@ -62,11 +60,11 @@ body {
   transform: translateY(-50%);
   fill: #000;
   cursor: pointer;
-  z-index: 10; /* اطمینان از اینکه دکمه‌ها بالای اسلایدر قرار دارند */
+  z-index: 10;
 }
 
 .arrow--left {
-  left: 5px; /* فاصله نوار جابجایی */
+  left: 5px;
 }
 
 .arrow--right {
