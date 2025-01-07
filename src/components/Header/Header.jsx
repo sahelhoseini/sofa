@@ -30,14 +30,14 @@ const Header = () => {
   return (
     <>
       <div
-        className={`w-full m-auto max-w-[1440px] h-20 flex items-center justify-around overflow-hidden transition-all duration-300 ${
-          isSticky ? "fixed top-0 left-0 bg-white shadow-md z-10" : "static"
+        className={`w-full mx-auto max-w-[1440px] h-20 flex items-center justify-around overflow-hidden transition-all duration-300 ${
+          isSticky ? " fixed top-0 bg-white shadow-md z-10" : "static"
         }`}
       >
         <img
           src={window.location.origin + "/images/logo.png"}
           alt=""
-          className="my-2 max-w-[120px]"
+          className="my-2 md:max-w-[120px] max-w-[90px]"
         />
         <ul className="hidden md:flex md:items-center">
           {navItems.map((item) => (
