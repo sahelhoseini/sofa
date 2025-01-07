@@ -63,7 +63,7 @@ const Header = () => {
           {navItems.map((item) => (
             <li
               key={item.name}
-              className={`relative mx-3 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full ${
+              className={`relative mx-3 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full  text-sm  ${
                 location.pathname === item.path ? "before:w-full" : ""
               }`}
             >
