@@ -1,10 +1,12 @@
-import { Hero, Slider } from "../../components";
+import { Category, Hero, KitchenSection, Slider } from "../../components";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <Slider />
+      <Category />
+      <KitchenSection />
     </>
   );
 };
