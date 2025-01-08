@@ -17,15 +17,11 @@ const ProductCart = ({ image }) => {
         </div>
 
         <div className="absolute top-5 md:right-0 -right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Link to="#">
-            <IoHeartOutline className="mr-5 text-gray-700 md:size-5 size-2" />
-          </Link>
+          <IoHeartOutline className="mr-5 text-gray-700 md:size-5 size-2" />
         </div>
 
         <div className="absolute bottom-20 md:right-0 -right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Link to="#">
-            <BsCart2 className="mr-5 text-gray-700 md:size-5 size-2" />
-          </Link>
+          <BsCart2 className="mr-5 text-gray-700 md:size-5 size-2" />
         </div>
       </Link>
     </div>
