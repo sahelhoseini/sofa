@@ -1,4 +1,5 @@
 import {
+  Banner,
   Category,
   Hero,
   KitchenSection,
@@ -13,6 +14,7 @@ const Home = () => {
       <Slider />
       <Category />
       <KitchenSection />
+      <Banner />
       <MultiSlider />
     </>
   );
