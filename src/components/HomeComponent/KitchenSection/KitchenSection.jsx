@@ -7,7 +7,7 @@ const KitchenSection = () => {
         <p className="font-extrabold text-2xl text-center mb-5">
           You Are In The Kitchen
         </p>
-        <div className=" grid grid-cols-4 md:px-44 gap-5 px-10 ">
+        <div className=" grid grid-cols-4 md:px-44  px-10 ">
           <ProductCart image="chair-3.png" />
           <ProductCart image="chair-1.png" />
           <ProductCart image="chair-4.png" />
