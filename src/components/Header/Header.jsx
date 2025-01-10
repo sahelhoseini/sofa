@@ -20,9 +20,9 @@ const Header = () => {
   }, []);
 
   const navItems = [
+    { name: "Home", path: "/" },
     { name: "Shop", path: "/shop" },
     { name: "Blog", path: "/blog" },
-    { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Contact Us", path: "/contact" },
   ];
@@ -30,40 +30,45 @@ const Header = () => {
   return (
     <>
       <div
-        className={`w-full mx-auto max-w-[1440px] h-20 flex items-center justify-around overflow-hidden transition-all duration-300 ${
-          isSticky ? " fixed top-0 bg-white shadow-md z-10" : "static"
+        className={`overflow-hidden fixed w-full max-w-[1440px] h-20 flex items-center justify-around transition-all duration-300 top-0 left-1/2 transform -translate-x-1/2 bg-white z-10 ${
+          isSticky ? "md:shadow-md" : null
         }`}
       >
-        <img
-          src={window.location.origin + "/images/logo.png"}
-          alt=""
-          className="my-2 md:max-w-[120px] max-w-[90px]"
-        />
-        <ul className="hidden md:flex md:items-center">
-          {navItems.map((item) => (
-            <li
-              key={item.name}
-              className={`relative mr-7 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full ${
-                location.pathname === item.path ? "before:w-full" : ""
-              }`}
-            >
-              {item.name}
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center">
-          <IoHeartOutline size="1.3rem" className="mr-5 text-gray-700" />
-          <FaRegUser size="1.3rem" className="mr-5 text-gray-700" />
-          <BsCart2 size="1.3rem" className="mr-5 text-gray-700" />
+        <div className="w-full flex items-center justify-between px-4">
+          <img
+            src={`${window.location.origin}/images/logo.png`}
+            alt=""
+            className="my-2 md:max-w-[120px] max-w-[90px]"
+          />
+          <ul className="hidden md:flex md:items-center">
+            {navItems.map((item) => (
+              <li
+                key={item.name}
+                className={`relative mr-7 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full ${
+                  location.pathname === item.path ? "before:w-full" : ""
+                }`}
+              >
+                {item.name}
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center">
+            <IoHeartOutline size="1.3rem" className="mr-5 text-gray-700" />
+            <FaRegUser size="1.3rem" className="mr-5 text-gray-700" />
+            <BsCart2 size="1.3rem" className="mr-5 text-gray-700" />
+          </div>
         </div>
       </div>
-      <div className="border-t-2 pt-2 md:hidden">
+      <div
+        className={`fixed w-full m-auto border-t-2 pt-2 md:hidden top-16 bg-white ${
+          isSticky ? "shadow-md" : null
+        } z-10 py-5`}
+      >
         <ul className="flex items-center justify-center">
           {navItems.map((item) => (
             <li
               key={item.name}
-              className={`relative mx-3 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full  text-sm  ${
+              className={`relative mx-3 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full text-sm ${
                 location.pathname === item.path ? "before:w-full" : ""
               }`}
             >
