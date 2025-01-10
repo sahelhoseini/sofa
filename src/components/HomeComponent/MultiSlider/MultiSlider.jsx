@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./style.css";
@@ -28,9 +28,23 @@ const MultiSlider = () => {
     "chair-5.png",
   ];
 
+  // افزودن autoplay
+  useEffect(() => {
+    if (!instanceRef.current) return; // اگر اسلایدر بارگذاری نشده باشد، برگردید
+
+    const interval = setInterval(() => {
+      instanceRef.current.next(); // به اسلاید بعدی بروید
+    }, 3000); // زمان بین تغییر اسلایدها (در میلی‌ثانیه)
+
+    return () => clearInterval(interval); // پاک کردن interval هنگامUnmount
+  }, [instanceRef]);
+
   return (
     <>
       <div className="navigation-wrapper">
+        <p className="font-extrabold md:text-2xl text-center mb-3">
+          TOP SELLERS
+        </p>
         <div ref={sliderRef} className="keen-slider">
           {sliderImage.map((item, index) => (
             <div className="keen-slider__slide" key={index}>
@@ -65,12 +79,12 @@ const MultiSlider = () => {
 };
 
 function Arrow(props) {
-  const disabled = props.disabled ? " arrow--disabled" : "";
+  const disabled = props.disabled ? " arrowbtn--disabled" : "";
   return (
     <svg
       onClick={props.onClick}
-      className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
+      className={`arrowbtn ${
+        props.left ? "arrowbtn--left" : "arrowbtn--right"
       } ${disabled}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"

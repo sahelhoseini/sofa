@@ -2,6 +2,7 @@ import {
   Banner,
   Category,
   Hero,
+  InstagramSection,
   KitchenSection,
   MultiSlider,
   Slider,
@@ -16,6 +17,7 @@ const Home = () => {
       <KitchenSection />
       <Banner />
       <MultiSlider />
+      <InstagramSection />
     </>
   );
 };

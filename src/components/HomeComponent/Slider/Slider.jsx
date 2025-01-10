@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./style.css";
@@ -25,6 +25,17 @@ const Slider = () => {
     "sofa-slider-2.jpg",
     "sofa-slider-1.jpg",
   ];
+
+  // افزودن autoplay
+  useEffect(() => {
+    if (!instanceRef.current) return; // اگر اسلایدر بارگذاری نشده باشد، برگردید
+
+    const interval = setInterval(() => {
+      instanceRef.current.next(); // به اسلاید بعدی بروید
+    }, 7000); // زمان بین تغییر اسلایدها (در میلی‌ثانیه)
+
+    return () => clearInterval(interval); // پاک کردن interval هنگامUnmount
+  }, [instanceRef]);
 
   return (
     <>
