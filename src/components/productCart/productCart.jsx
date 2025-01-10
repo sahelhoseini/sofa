@@ -12,8 +12,8 @@ const ProductCart = ({ image }) => {
           className="rounded-t-3xl group-hover:opacity-85 transition-opacity duration-300"
         />
         <div className="p-3">
-          <p className="font-semibold text-sm md:text-lg">name</p>
-          <p className="text-sm md:text-lg">$200.00</p>
+          <p className="font-semibold text-xs md:text-lg">name</p>
+          <p className="text-xs md:text-lg">$200.00</p>
         </div>
 
         {/* آیکن اول با پس‌زمینه دایره‌ای */}

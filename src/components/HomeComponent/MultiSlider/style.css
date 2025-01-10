@@ -56,7 +56,7 @@ body {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   fill: #000;
   cursor: pointer;
