@@ -5,3 +5,4 @@ export { default as Category } from "./HomeComponent/Category/Category";
 export { default as Footer } from "./Footer/Footer";
 export { default as ProductCart } from "./productCart/productCart";
 export { default as KitchenSection } from "./HomeComponent/KitchenSection/KitchenSection";
+export { default as MultiSlider } from "./HomeComponent/MultiSlider/MultiSlider";
