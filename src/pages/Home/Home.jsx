@@ -1,4 +1,10 @@
-import { Category, Hero, KitchenSection, Slider } from "../../components";
+import {
+  Category,
+  Hero,
+  KitchenSection,
+  MultiSlider,
+  Slider,
+} from "../../components";
 
 const Home = () => {
   return (
@@ -7,6 +13,7 @@ const Home = () => {
       <Slider />
       <Category />
       <KitchenSection />
+      <MultiSlider />
     </>
   );
 };
