@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ProductCart = ({ image }) => {
   return (
-    <div className="relative col-span-1 group">
+    <div className="relative col-span-1 group m-1 md:m-3">
       <Link to="#">
         <img
           src={window.location.origin + `/images/${image}`}
@@ -16,12 +16,18 @@ const ProductCart = ({ image }) => {
           <p className="text-sm md:text-lg">$200.00</p>
         </div>
 
-        <div className="absolute top-5 md:right-0 -right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <IoHeartOutline className="mr-5 text-gray-700 md:size-5 size-2" />
+        {/* آیکن اول با پس‌زمینه دایره‌ای */}
+        <div className="absolute top-5 md:right-2 -right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex justify-center items-center bg-white rounded-full w-8 h-8 ">
+            <IoHeartOutline className="text-gray-700 size-4" />
+          </div>
         </div>
 
-        <div className="absolute bottom-20 md:right-0 -right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <BsCart2 className="mr-5 text-gray-700 md:size-5 size-2" />
+        {/* آیکن دوم با پس‌زمینه دایره‌ای */}
+        <div className="absolute bottom-20 md:right-2 -right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex justify-center items-center bg-black rounded-full w-8 h-8">
+            <BsCart2 className="text-gray-300 size-4" />
+          </div>
         </div>
       </Link>
     </div>
