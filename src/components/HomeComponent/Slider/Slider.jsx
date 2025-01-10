@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./style.css";
-import { FaQuoteRight } from "react-icons/fa";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

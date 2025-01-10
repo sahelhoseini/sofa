@@ -61,6 +61,7 @@ body {
   fill: #000;
   cursor: pointer;
   z-index: 2;
+  box-shadow: 0 0 3px gray, 0 0 5px gray;
 }
 
 .arrow--left {
