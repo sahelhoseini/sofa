@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { IoHeartOutline } from "react-icons/io5";
@@ -35,21 +35,24 @@ const Header = () => {
         }`}
       >
         <div className="w-full flex items-center justify-between px-4">
-          <img
-            src={`${window.location.origin}/images/logo.png`}
-            alt=""
-            className="my-2 md:max-w-[120px] max-w-[90px]"
-          />
+          <Link to="/">
+            <img
+              src={`${window.location.origin}/images/logo.png`}
+              alt="sofa"
+              className="my-2 md:max-w-[120px] max-w-[90px]"
+            />
+          </Link>
           <ul className="hidden md:flex md:items-center">
             {navItems.map((item) => (
-              <li
-                key={item.name}
-                className={`relative mr-7 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full ${
-                  location.pathname === item.path ? "before:w-full" : ""
-                }`}
-              >
-                {item.name}
-              </li>
+              <Link to={item.path} key={item.name}>
+                <li
+                  className={`relative mr-7 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full ${
+                    location.pathname === item.path ? "before:w-full" : ""
+                  }`}
+                >
+                  {item.name}
+                </li>
+              </Link>
             ))}
           </ul>
           <div className="flex items-center">
@@ -72,7 +75,7 @@ const Header = () => {
                 location.pathname === item.path ? "before:w-full" : ""
               }`}
             >
-              {item.name}
+              <Link to={item.path}>{item.name}</Link>
             </li>
           ))}
         </ul>
