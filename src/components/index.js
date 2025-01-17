@@ -8,3 +8,5 @@ export { default as KitchenSection } from "./HomeComponent/KitchenSection/Kitche
 export { default as MultiSlider } from "./HomeComponent/MultiSlider/MultiSlider";
 export { default as Banner } from "./HomeComponent/Banner/Banner";
 export { default as InstagramSection } from "./HomeComponent/InstagramSection/InstagramSection";
+export { default as BannerShop } from "./ShopComponent/BannerShop/BannerShop";
+export { default as FilterProduct } from "./ShopComponent/FilterProduct/FilterProduct";

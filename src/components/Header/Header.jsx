@@ -44,8 +44,9 @@ const Header = () => {
           </Link>
           <ul className="hidden md:flex md:items-center">
             {navItems.map((item) => (
-              <Link to={item.path} key={item.name}>
+              <Link to={item.path}>
                 <li
+                  key={item.name}
                   className={`relative mr-7 text-gray-700 cursor-pointer before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-0 before:bg-gray-700 before:transition-all before:ease-in-out before:duration-300 hover:before:w-full ${
                     location.pathname === item.path ? "before:w-full" : ""
                   }`}
