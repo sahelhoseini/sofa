@@ -13,8 +13,8 @@ const ProductCart = ({ image }) => {
   //   setBasketIcon(!basketIcon);
   // };
   return (
-    <div className="relative md:col-span-3 col-span-4 group m-1 md:m-3">
-      <Link to="#">
+    <div className="relative md:col-span-3 col-span-4 group m-1 md:m-3 border rounded-xl md:rounded-3xl">
+      <Link to="/product">
         <img
           src={window.location.origin + `/images/${image}`}
           alt="Product"
