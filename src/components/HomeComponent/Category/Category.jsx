@@ -1,62 +1,69 @@
+import { IoBedOutline } from "react-icons/io5";
+import { LiaChairSolid } from "react-icons/lia";
+import { MdCrib } from "react-icons/md";
+import { RiSofaLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
     <div className="w-full m-auto max-w-[1440px]">
-      <div className="grid grid-cols-3 gap-1 md:gap-4 px-10 md:px-36">
-        <div className="col-span-1 w-full max-h-72 relative overflow-hidden rounded-3xl">
-          <Link to="/">
-            <img
-              src={window.location.origin + "/images/table.jpg"}
-              alt=""
-              className="w-full h-full object-cover rounded-3xl transition-transform duration-300 transform ease-in-out scale-100 hover:scale-110" // افزایش مقدار تغییر اندازه
-            />
-            <p className="rounded-3xl bg-white px-1 py-1 md:text-xl text-xs absolute bottom-1 left-1">
-              Living Room
-            </p>
-          </Link>
-        </div>
-
-        <div className="col-span-1 w-full max-h-72 relative overflow-hidden rounded-3xl">
-          <Link to="/">
-            <img
-              src={window.location.origin + "/images/bed.jpg"}
-              alt=""
-              className="w-full h-full object-cover rounded-3xl transition-transform duration-300 transform ease-in-out scale-100 hover:scale-110"
-            />
-            <p className="rounded-3xl bg-white px-1 py-1 md:text-xl text-xs absolute bottom-1 left-1">
-              Bed Room
-            </p>
-          </Link>
-        </div>
-
-        <div className="col-span-1 flex flex-col gap-1 md:gap-2">
-          <div className="max-h-36 relative overflow-hidden rounded-3xl">
-            <Link to="/">
-              <img
-                src={window.location.origin + "/images/baby.jpg"}
-                alt=""
-                className="w-full h-full object-cover rounded-3xl transition-transform duration-300 transform ease-in-out scale-100 hover:scale-110"
+      <div className="grid grid-cols-4 gap-4  px-10 md:px-36">
+        {/* sofa */}
+        <Link to="#">
+          <div className="col-span-1 flex flex-col items-center group">
+            <div className="w-16 h-16 md:h-20 md:w-20 bg-orange-300 rounded-full flex justify-center items-center group-hover:bg-white shadow-lg">
+              <RiSofaLine
+                size="3rem"
+                className="text-white group-hover:text-orange-300"
               />
-              <p className="rounded-3xl bg-white px-1 py-1 md:text-xl text-xs absolute bottom-1 left-1">
-                Kids Room
-              </p>
-            </Link>
+            </div>
+            <p className="font-bold text-center mt-2 text-base md:text-xl">
+              Sofa
+            </p>
           </div>
-
-          <div className="max-h-36 relative overflow-hidden rounded-3xl">
-            <Link to="/">
-              <img
-                src={window.location.origin + "/images/kitchen.jpg"}
-                alt=""
-                className="w-full h-full object-cover rounded-3xl transition-transform duration-300 transform ease-in-out scale-100 hover:scale-110"
+        </Link>
+        {/* child */}
+        <Link to="#">
+          <div className="col-span-1 flex flex-col items-center group">
+            <div className="w-16 h-16 md:h-20 md:w-20 bg-orange-300 rounded-full flex justify-center items-center group-hover:bg-white shadow-lg">
+              <MdCrib
+                size="3rem"
+                className="text-white group-hover:text-orange-300"
               />
-              <p className="rounded-3xl bg-white px-1 py-1 md:text-xl text-xs absolute bottom-1 left-1">
-                Kitchen
-              </p>
-            </Link>
+            </div>
+            <p className="text-base md:text-xl font-bold text-center mt-2">
+              Child
+            </p>
           </div>
-        </div>
+        </Link>
+        {/* bed */}
+        <Link to="#">
+          <div className="col-span-1 flex flex-col items-center group">
+            <div className="w-16 h-16 md:h-20 md:w-20 bg-orange-300 rounded-full flex justify-center items-center group-hover:bg-white shadow-lg">
+              <IoBedOutline
+                size="3rem"
+                className="text-white group-hover:text-orange-300"
+              />
+            </div>
+            <p className="text-base md:text-xl font-bold text-center mt-2">
+              Bed
+            </p>
+          </div>
+        </Link>
+        {/* kitchen */}
+        <Link to="#">
+          <div className="col-span-1 flex flex-col items-center group">
+            <div className="w-16 h-16 md:h-20 md:w-20 bg-orange-300 rounded-full flex justify-center items-center group-hover:bg-white shadow-lg">
+              <LiaChairSolid
+                size="3rem"
+                className="text-white group-hover:text-orange-300"
+              />
+            </div>
+            <p className="text-base md:text-xl font-bold text-center mt-2">
+              Kitchen
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
   );
