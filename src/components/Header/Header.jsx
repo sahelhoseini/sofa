@@ -58,7 +58,9 @@ const Header = () => {
           </ul>
           <div className="flex items-center">
             <IoHeartOutline size="1.3rem" className="mr-5 text-gray-700" />
-            <FaRegUser size="1.3rem" className="mr-5 text-gray-700" />
+            <Link to="/profile">
+              <FaRegUser size="1.3rem" className="mr-5 text-gray-700" />
+            </Link>
             <BsCart2 size="1.3rem" className="mr-5 text-gray-700" />
           </div>
         </div>
