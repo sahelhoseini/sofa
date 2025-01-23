@@ -2,10 +2,18 @@ import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { MultiSlider } from "../../components";
 
 const Product = () => {
   const [selectedColor, setSelectedColor] = useState("");
   const [addedColors, setAddedColors] = useState([]);
+
+  const sliderImage = [
+    "chair-3.png",
+    "chair-2.png",
+    "chair-1.png",
+    "chair-5.png",
+  ];
 
   const product = {
     image1: "chair-1.png",
@@ -48,9 +56,9 @@ const Product = () => {
           Back To Shop
         </Link>
 
-        <div className="container mx-auto grid grid-cols-12 border border-gray-300 gap-3 mb-10 rounded-xl">
+        <div className="container mx-auto grid grid-cols-12 border border-gray-300 gap-3 mb-10 rounded-xl overflow-hidden">
           {/* Product Images */}
-          <div className="col-span-2 max-[700px]:col-span-4 border-r p-5">
+          <div className="col-span-4 md:col-span-2 border-r p-2 md:p-5">
             {product.image1 && (
               <button onClick={() => onClickLargImage(product.image1)}>
                 <img
@@ -93,16 +101,16 @@ const Product = () => {
           </div>
 
           {/* Main Product Image */}
-          <div className="col-span-5 max-w-[700px]:col-span-8 border-l flex items-center">
+          <div className="col-span-8 md:col-span-5 flex">
             <img
               src={window.location.origin + `/images/${largImage}`}
               alt=""
-              className="overflow-hidden"
+              className="object-cover"
             />
           </div>
 
           {/* Product Details */}
-          <div className="col-span-5 max-w-[700px]:col-span-12 p-5">
+          <div className="col-span-12 md:col-span-5 p-5 border-t md:border-none">
             <p className="text-gray-500 text-xs">{product.code}</p>
             <p className="text-2xl">{product.name}</p>
             <p className="text-gray-500 text-xs border-b border-gray-100 py-5">
@@ -188,6 +196,8 @@ const Product = () => {
           </div>
         </div>
       )} */}
+        {/* similar product */}
+        <MultiSlider sliderImage={sliderImage} />
       </div>
     </>
   );

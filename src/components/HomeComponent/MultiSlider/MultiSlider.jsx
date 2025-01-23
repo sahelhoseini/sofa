@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./style.css";
 import { ProductCart } from "../../../components";
-const MultiSlider = () => {
+const MultiSlider = ({ sliderImage }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -20,13 +20,6 @@ const MultiSlider = () => {
       spacing: 10,
     },
   });
-
-  const sliderImage = [
-    "chair-3.png",
-    "chair-2.png",
-    "chair-1.png",
-    "chair-5.png",
-  ];
 
   // افزودن autoplay
   useEffect(() => {
