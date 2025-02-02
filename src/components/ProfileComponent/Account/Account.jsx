@@ -19,16 +19,14 @@ const Account = () => {
   };
   return (
     <div className="flex flex-col relative h-full">
-      <div className="flex flex-col items-center w-1/4">
-        {/* profile image */}
-        <img
-          src={window.location.origin + "/images/chair-1.png"}
-          alt=""
-          className="rounded-full md:w-2/3"
-        />
-        {/* full name */}
-        <p className="font-bold md:text-xl mb-10">{user.name}</p>
-      </div>
+      {/* profile image */}
+      <img
+        src={window.location.origin + "/images/chair-1.png"}
+        alt=""
+        className="rounded-full md:w-2/3"
+      />
+      {/* full name */}
+      <p className="font-bold md:text-xl mb-10">{user.name}</p>
 
       {/* user's address */}
       <div className="flex items-center mb-3">
