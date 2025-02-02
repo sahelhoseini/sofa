@@ -8,7 +8,7 @@ const Profile = () => {
   };
   return (
     <>
-      <div className="w-full max-w-[1440px] m-auto md:grid md:grid-cols-6 text-xs md:text-base px-5 md:px-20 lg:px-32 mt-32 h-[calc(100vh-8rem)] flex flex-col overflow-hidden">
+      <div className="w-full max-w-[1440px] m-auto md:grid md:grid-cols-6 text-xs md:text-base px-5 md:px-20 lg:px-32 mt-32 h-[calc(85vh-8rem)] md:h-[calc(100vh-8rem)] flex flex-col overflow-hidden">
         {/* Sidebar */}
         <div className="md:col-span-1 flex flex-col text-center border-2 rounded-tl-3xl md:rounded-bl-3xl md:rounded-tr-none rounded-tr-3xl md:relative items-center justify-between p-2">
           <div className="hidden  absolute top-3 left-1 md:flex flex-col items-center">
