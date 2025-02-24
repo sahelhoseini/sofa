@@ -11,3 +11,8 @@ export { default as InstagramSection } from "./HomeComponent/InstagramSection/In
 export { default as BannerShop } from "./ShopComponent/BannerShop/BannerShop";
 export { default as FilterProduct } from "./ShopComponent/FilterProduct/FilterProduct";
 export { default as Account } from "./ProfileComponent/Account/Account";
+export { default as Orders } from "./ProfileComponent/Orders/Orders";
+export { default as OrderCart } from "./ProfileComponent/Orders/OrderCart/OrderCart";
+export { default as Order } from "./ProfileComponent/Orders/Order/Order";
+export { default as Favorit } from "./ProfileComponent/Favorit/Favorit";
+export { default as ChangePass } from "./ProfileComponent/ChangePass/ChangePass";
