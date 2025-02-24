@@ -1,5 +1,8 @@
 import { useState } from "react";
 import Account from "../../components/ProfileComponent/Account/Account";
+import Orders from "../../components/ProfileComponent/Orders/Orders";
+import Favorit from "../../components/ProfileComponent/Favorit/Favorit";
+import { ChangePass } from "../../components";
 
 const Profile = () => {
   const [tabContent, setTabContent] = useState(1);
@@ -59,7 +62,17 @@ const Profile = () => {
 
         {/* Main Content */}
         <div className="md:col-span-5 p-4 border-2 md:rounded-tr-3xl rounded-br-3xl rounded-bl-3xl md:rounded-bl-none overflow-y-auto h-full">
-          {tabContent === 1 ? <Account /> : <p>another tab</p>}
+          {tabContent === 1 ? (
+            <Account />
+          ) : tabContent === 2 ? (
+            <Orders />
+          ) : tabContent === 3 ? (
+            <Favorit />
+          ) : tabContent === 4 ? (
+            <ChangePass />
+          ) : (
+            <p>another tab</p>
+          )}
           {/* {[...Array(50)].map((_, i) => (
             <p key={i}>محتوای بیشتر برای تست اسکرول {i + 1}</p>
           ))} */}
