@@ -41,7 +41,7 @@ const MultiSlider = ({ sliderImage }) => {
         <div ref={sliderRef} className="keen-slider">
           {sliderImage.map((item, index) => (
             <div className="keen-slider__slide" key={index}>
-              <ProductCart image={item} />
+              <ProductCart image={item} name={"woody"} price={"50.00"} />
             </div>
           ))}
         </div>

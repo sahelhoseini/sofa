@@ -8,14 +8,14 @@ const KitchenSection = () => {
           You Are In The Kitchen
         </p>
         <div className=" grid grid-cols-12 md:px-44  px-10 ">
-          <ProductCart image="chair-3.png" />
-          <ProductCart image="chair-1.png" />
-          <ProductCart image="chair-4.png" />
-          <ProductCart image="chair-3.png" />
-          <ProductCart image="chair-5.png" />
-          <ProductCart image="chair-1.png" />
-          <ProductCart image="chair-4.png" />
-          <ProductCart image="chair-5.png" />
+          <ProductCart image="chair-3.png" name={"woody"} price={"100.00"} />
+          <ProductCart image="chair-1.png" name={"woody"} price={"100.00"} />
+          <ProductCart image="chair-4.png" name={"woody"} price={"100.00"} />
+          <ProductCart image="chair-3.png" name={"woody"} price={"100.00"} />
+          <ProductCart image="chair-5.png" name={"woody"} price={"100.00"} />
+          <ProductCart image="chair-1.png" name={"woody"} price={"100.00"} />
+          <ProductCart image="chair-4.png" name={"woody"} price={"100.00"} />
+          <ProductCart image="chair-5.png" name={"woody"} price={"100.00"} />
         </div>
       </div>
     </>
