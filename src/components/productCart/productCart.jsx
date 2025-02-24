@@ -3,7 +3,7 @@ import { BsCart2 } from "react-icons/bs";
 import { IoHeartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-const ProductCart = ({ image }) => {
+const ProductCart = ({ image, name, price }) => {
   const [basketIcon, setBasketIcon] = useState(false);
   const OnClickBasketIcon = () => {
     setBasketIcon(!basketIcon);
@@ -21,8 +21,8 @@ const ProductCart = ({ image }) => {
           className="rounded-t-xl md:rounded-t-3xl group-hover:opacity-75 transition-opacity duration-300"
         />
         <div className="p-3">
-          <p className="font-semibold text-xs md:text-lg">name</p>
-          <p className="text-xs md:text-lg">$200.00</p>
+          <p className="font-semibold text-xs md:text-lg">{name}</p>
+          <p className="text-xs md:text-lg">${price}</p>
         </div>
 
         <div className="absolute md:top-5 top-1 right-2  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
